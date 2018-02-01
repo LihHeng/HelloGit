@@ -10,16 +10,34 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //can declare by using this two way
+    let myGender : Gender = .both
+    let yourGender = Gender.both
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func sayHello(gender : Gender) {
+        print("My gender is")
+        print(gender.rawValue)
+    }
+    
+    func func1(gender)
 
 
 }
 
+//default is Int 0,1,2 if no declare as String
+enum Gender : String{
+    case male
+    case female
+    case both
+}
